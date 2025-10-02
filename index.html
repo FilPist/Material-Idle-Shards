@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Idle Shards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200vw;
+        height: 200vh;
+        z-index: -1;
+        background: radial-gradient(circle at 25% 25%, rgba(209, 213, 255, 0.3), transparent 30%),
+                    radial-gradient(circle at 75% 25%, rgba(233, 213, 255, 0.3), transparent 30%),
+                    radial-gradient(circle at 25% 75%, rgba(221, 214, 254, 0.3), transparent 30%),
+                    radial-gradient(circle at 75% 75%, rgba(196, 181, 253, 0.3), transparent 30%);
+        animation: gradient-move 30s ease-in-out infinite;
+        transform: translate(-50vw, -50vh);
+      }
+      .dark body::before {
+        background: radial-gradient(circle at 25% 25%, rgba(67, 56, 202, 0.2), transparent 30%),
+                    radial-gradient(circle at 75% 25%, rgba(109, 40, 217, 0.2), transparent 30%),
+                    radial-gradient(circle at 25% 75%, rgba(124, 58, 237, 0.2), transparent 30%),
+                    radial-gradient(circle at 75% 75%, rgba(76, 29, 149, 0.2), transparent 30%);
+      }
+
+      @keyframes gradient-move {
+        0% { background-position: 0% 0%; }
+        25% { background-position: 25% 50%; }
+        50% { background-position: 50% 100%; }
+        75% { background-position: 25% 50%; }
+        100% { background-position: 0% 0%; }
+      }
+      .floating-number {
+        animation: floatUp 1.5s ease-out forwards;
+        pointer-events: none;
+        user-select: none;
+      }
+      .floating-number.crit {
+        animation: floatUpCrit 1.8s ease-out forwards;
+        font-weight: 900;
+        -webkit-text-stroke: 1px rgba(0,0,0,0.3);
+      }
+      @keyframes floatUp {
+        0% { opacity: 1; transform: translateY(0) scale(1); }
+        100% { opacity: 0; transform: translateY(-80px) scale(1.5); }
+      }
+       @keyframes floatUpCrit {
+        0% { opacity: 1; transform: translateY(0) scale(1.2); }
+        50% { transform: translateY(-60px) scale(1.8); }
+        100% { opacity: 0; transform: translateY(-120px) scale(2.5); }
+      }
+      
+      .modal-backdrop { animation: fadeIn 0.3s ease-out forwards; }
+      .modal-content { animation: scaleIn 0.3s ease-out forwards; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes scaleIn { from { opacity: 0; transform: translateY(20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(0, 0, 0, 0.2); border-radius: 10px; }
+      .dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.2); }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background-color: rgba(0, 0, 0, 0.3); }
+      .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover { background-color: rgba(255, 255, 255, 0.3); }
+
+
+      .golden-shard {
+        animation: pulse 2s infinite, fadeIn 0.5s ease-out forwards;
+        cursor: pointer;
+        filter: drop-shadow(0 0 15px gold);
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+      .boss-hp-bar-inner { transition: width 0.2s linear; }
+      .boss-summon-animation { animation: bossSummon 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+      @keyframes bossSummon {
+          0% { transform: scale(0.5); opacity: 0; }
+          70% { transform: scale(1.05); opacity: 1; }
+          100% { transform: scale(1); opacity: 1; }
+      }
+      .boss-damage-animation { animation: bossDamage 0.15s ease-out; }
+      @keyframes bossDamage {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(0.95) rotate(-2deg); filter: brightness(1.5); }
+      }
+      .boss-defeat-animation { animation: bossDefeat 0.8s ease-in forwards; }
+      @keyframes bossDefeat {
+          0% { transform: scale(1) rotate(0); opacity: 1; }
+          100% { transform: scale(0) rotate(180deg); opacity: 0; }
+      }
+      
+      .shard-anim-breath {
+        animation: shard-breath 6s ease-in-out infinite;
+        transform-origin: center center;
+      }
+      .shard-anim-click {
+        animation: shard-click-effect 0.2s ease-out;
+        transform-origin: center center;
+      }
+      @keyframes shard-breath {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+      }
+      @keyframes shard-click-effect {
+        0% { transform: scale(1); }
+        40% { transform: scale(0.92); }
+        100% { transform: scale(1); }
+      }
+      
+      .hexagon-anim-float {
+        animation: hexagon-float 8s ease-in-out infinite;
+      }
+      @keyframes hexagon-float {
+        0%, 100% {
+          transform: scale(1) translateY(0px);
+          transform-origin: 50% 50%;
+        }
+        50% {
+          transform: scale(1.04) translateY(-1px);
+          transform-origin: 50% 50%;
+        }
+      }
+
+      .bat {
+          position: absolute;
+          color: #1e293b;
+          pointer-events: none;
+          animation: fly 8s linear infinite;
+          z-index: 10;
+      }
+       .dark .bat { color: #f1f5f9; }
+      @keyframes fly {
+          0% { transform: translateX(-10vw) translateY(0vh) scale(0.8); opacity: 1; }
+          25% { transform: translateX(25vw) translateY(-10vh) scale(1); }
+          50% { transform: translateX(50vw) translateY(5vh) scale(1.2); }
+          75% { transform: translateX(75vw) translateY(-5vh) scale(1); }
+          100% { transform: translateX(110vw) translateY(10vh) scale(0.8); opacity: 1; }
+      }
+
+      .snow-flake {
+          position: absolute;
+          background: white;
+          border-radius: 50%;
+          opacity: 0.8;
+          animation: fall linear infinite;
+      }
+      @keyframes fall {
+          from { transform: translateY(-10vh) translateX(0vw); }
+          to { transform: translateY(110vh) translateX(5vw); }
+      }
+      
+      .shardling {
+        position: absolute;
+        top: calc(50% - 4px);
+        left: calc(50% - 4px);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        box-shadow: 0 0 6px white, 0 0 10px currentColor;
+        animation: orbit 10s linear infinite;
+        will-change: transform;
+      }
+      @keyframes orbit {
+        from { transform: rotate(0deg) translateX(min(30vw, 160px)) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(min(30vw, 160px)) rotate(-360deg); }
+      }
+
+      .settings-panel {
+        animation: liquid-expand-in 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        transform-origin: bottom left;
+      }
+       @keyframes liquid-expand-in {
+        from {
+          clip-path: circle(0% at 0% 100%);
+          opacity: 0.5;
+        }
+        to {
+          clip-path: circle(250% at 0% 100%);
+          opacity: 1;
+        }
+      }
+
+      .particle {
+        position: absolute;
+        background-color: #c084fc;
+        border-radius: 50%;
+        animation: particle-burst 0.8s ease-out forwards;
+        pointer-events: none;
+      }
+      @keyframes particle-burst {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(calc(var(--final-x) - 50%), calc(var(--final-y) - 50%)) scale(0);
+          opacity: 0;
+        }
+      }
+      .ToggleSwitch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+      }
+      .ToggleSwitch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .ToggleSwitch .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #cbd5e1;
+        transition: .4s;
+        border-radius: 24px;
+      }
+      .ToggleSwitch .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+      }
+      .ToggleSwitch input:checked + .slider {
+        background-color: #8b5cf6;
+      }
+      .ToggleSwitch input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+
+      .achievement-toast {
+        animation: slideInAndOut 4s ease-in-out forwards;
+      }
+
+      @keyframes slideInAndOut {
+        0% { transform: translateX(120%); opacity: 0; }
+        15% { transform: translateX(0); opacity: 1; }
+        85% { transform: translateX(0); opacity: 1; }
+        100% { transform: translateX(120%); opacity: 0; }
+      }
+
+      .tooltip {
+        animation: tooltip-fade-in 0.2s ease-out forwards;
+        transform-origin: top center;
+      }
+      @keyframes tooltip-fade-in {
+        from { opacity: 0; transform: translateY(-5px) scale(0.95); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      /* Liquid Buy Amount Selector */
+      .buy-amount-selector {
+        position: relative;
+      }
+      .buy-amount-selector-pill {
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        border-radius: 9999px;
+        background-color: white;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy transition */
+        z-index: 0;
+      }
+      .dark .buy-amount-selector-pill {
+        background-color: #475569; /* slate-600 */
+      }
+      .buy-amount-selector button {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Singularity Grid */
+      .grid-line {
+        transition: stroke-dashoffset 0.8s ease-in-out;
+      }
+      .grid-node-core {
+        transition: all 0.3s ease-in-out;
+        animation: node-pulse 4s infinite ease-in-out;
+      }
+      .grid-node-ring {
+        transition: all 0.3s ease-in-out;
+        animation: node-spin 20s linear infinite;
+      }
+      .grid-node-purchased .grid-node-core {
+        animation-play-state: paused;
+      }
+      @keyframes node-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      @keyframes node-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#f8f7ff] text-slate-900 overflow-hidden dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300">
+    <div class="fixed top-0 left-0 right-0 h-1 bg-violet-500/80 z-50"></div>
+    <div id="root"></div>
+  </body>
+</html>

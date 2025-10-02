@@ -1,0 +1,273 @@
+{
+    "tabs": {
+        "generators": "Generators",
+        "upgrades": "Upgrades",
+        "skills": "Skills",
+        "talismans": "Talismans",
+        "achievements": "Achievements",
+        "prestige": "Prestige",
+        "lore": "Lore",
+        "stats": "Stats"
+    },
+    "stats": {
+        "spc": "SPC",
+        "crit": "Crit",
+        "sps": "SPS",
+        "relics": "Relics",
+        "essence": "Essence",
+        "dust": "Dust"
+    },
+    "card": {
+        "total_output": "Total Output",
+        "base_sps": "Base SPS",
+        "per_level": "Per Level",
+        "effect_per_level": "Effect / Lvl",
+        "total_effect": "Total Effect",
+        "next_bonus_at": "Next Bonus at Lvl {{level}}",
+        "special_effect": "Special Effect",
+        "preview_evolution": "Preview Evolution"
+    },
+    "buy_amount": "x{{amount}}",
+    "owned": "Owned",
+    "unlocked": "Unlocked",
+    "activate": "Activate",
+    "active": "Active ({{time}}s)",
+    "cooldown": "Cooldown ({{time}}s)",
+    "bonus_level": "Bonus Lvl: {{level}}",
+    "level_short": "Lv. {{level}}",
+    "buffs": {
+        "stored_power_active": "Stored Power! x{{multiplier}} Production ({{time}}s)",
+        "momentum_active": "Momentum! x{{multiplier}} Click Power"
+    },
+    "modal": {
+        "spc_title": "Shards per Click",
+        "spc_desc": "The amount of Shards you get per click. Boosted by upgrades, the Prestige Tree, and a small bonus for clicking the main Shard directly.",
+        "crit_title": "Critical Clicks",
+        "crit_desc": "Your chance to land a critical hit for bonus shards. Current Damage: x{{damage}}.",
+        "sps_title": "Shards per Second",
+        "sps_desc": "Shards earned automatically from Generators and Shardlings. Boosted by upgrades and the Prestige Tree.",
+        "relics_title": "Relics",
+        "relics_desc": "A special currency earned from Prestiging. Spend Relics in the Prestige tab on powerful, permanent upgrades that persist through resets.",
+        "dust_title": "Cosmic Dust",
+        "dust_desc": "A special resource earned from defeating bosses and finding Golden Shards. Used to craft powerful Talismans.",
+        "essence_title": "Singularity Essence",
+        "essence_desc": "An extremely powerful currency earned from Ascending. Spend it on game-altering upgrades in the Ascension tab.",
+        "got_it": "Got it",
+        "prestige_title": "Prestige",
+        "prestige_desc": "Reset your Shards, Upgrades, and Generators to gain powerful Relics.",
+        "prestige_gain": "You will gain:",
+        "prestige_relics": "Relics",
+        "ascension_title": "Ascend",
+        "ascension_desc": "Perform a deeper reset, resetting all Shards, Upgrades, Generators, and Relics. In return, you will gain Singularity Essence.",
+        "ascension_gain": "You will gain:",
+        "ascension_essence": "Singularity Essence",
+        "challenge_confirm_title": "Start Challenge: {{name}}",
+        "challenge_confirm_desc": "This will start a parallel playthrough. Your main game progress will be saved and restored after the challenge.",
+        "challenge_confirm_reward": "If you complete the challenge, you'll earn the reward for your main game.",
+        "challenge_confirm_exit": "If you exit before completing it, you will lose all challenge progress and return to your main game.",
+        "start_challenge": "Start Challenge",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "offline_title": "Welcome Back!",
+        "offline_desc": "You were away for {{time}}.",
+        "offline_sps_rate": "Average Production Rate",
+        "offline_total_gain": "Total Shards Gained",
+        "continue": "Continue",
+        "evolve_title": "Generator Evolution",
+        "evolve_preview_title": "Evolution Preview",
+        "evolve_desc": "Your {{name}} has reached a milestone! Choose a permanent specialization for this prestige run.",
+        "evolve_warning": "This choice cannot be changed until you prestige again.",
+        "evolve_choose": "Choose",
+        "evolve_cancel": "Decide Later",
+        "close": "Close"
+    },
+    "golden_shard": {
+        "shards": "+{{value}} Shards!",
+        "generator_surge": "Generator Surge!",
+        "click_frenzy": "Click Frenzy!",
+        "click_frenzy_active": "Click Frenzy Active! ({{time}}s)",
+        "free_upgrade": "+{{value}} Free Levels!",
+        "cosmic_dust": "+{{value}} Cosmic Dust!"
+    },
+    "talisman_panel": {
+        "title": "Talismans",
+        "desc": "Craft and equip Talismans for powerful, unique bonuses. Choose wisely!",
+        "craft": "Craft",
+        "equip": "Equip",
+        "equipped": "Equipped",
+        "upgrade": "Upgrade",
+        "loadouts": "Loadouts",
+        "loadout_1": "Loadout 1",
+        "loadout_2": "Loadout 2",
+        "active_loadout": "Active"
+    },
+    "talisman_effect": {
+        "crit_boost": "Critical Boost",
+        "crit_boost_desc": "+{{chance}}% Crit Chance & +{{damage}}% Crit Damage.",
+        "golden_shard_boost": "Golden Shard Bonus",
+        "golden_shard_boost_desc": "x{{value}} Golden Shard spawn rate and reward value.",
+        "offline_sps_rate": "Offline Production",
+        "offline_sps_rate_desc": "Calculates offline gains at 100% of your SPS.",
+        "sps_per_relic": "Hoarded Power",
+        "sps_per_relic_desc": "+{{value}}% total SPS per unspent Relic.",
+        "shardling_sps_boost": "Patient Hand",
+        "shardling_sps_boost_desc": "Shardlings are {{value}}x as effective.",
+        "boss_dust_multiplier": "Boss Hunter",
+        "boss_dust_multiplier_desc": "Gain {{value}}x Cosmic Dust from bosses.",
+        "stored_power_bonus": "Stored Power",
+        "stored_power_bonus_desc": "Upon returning, gain a temporary {{value}}x production boost based on offline time.",
+        "relic_on_click_chance": "Alchemist's Touch",
+        "relic_on_click_chance_desc": "Grants a {{value}}% chance on click to find a Relic.",
+        "momentum_click_boost": "Momentum",
+        "momentum_click_boost_desc": "+{{value}}% click power per click in the last 2s (max {{max}}%).",
+        "shard_cap_sps_boost": "Hoarder's Greed",
+        "shard_cap_sps_boost_desc": "Gain x{{value}} SPS when you have over 90% of your production for the last minute.",
+        "auto_collect_golden_shard": "Collector's Eye",
+        "auto_collect_golden_shard_desc": "Automatically collect Golden Shards at {{value}}% effectiveness."
+    },
+    "talisman": {
+        "crit": { "name": "Talisman of the Critical Eye", "desc": "Increases base critical chance by 2% and critical damage by 25%." },
+        "golden": { "name": "Talisman of the Golden Touch", "desc": "Golden Shards appear 50% more often and grant 50% more shards." },
+        "offline": { "name": "Talisman of the Sleeping Giant", "desc": "Offline progress is calculated at 100% of your SPS instead of 50%." },
+        "relic_power": { "name": "Talisman of Hoarded Power", "desc": "Gain +0.1% to your total SPS for every unspent Relic." },
+        "patient_hand": { "name": "Talisman of the Patient Hand", "desc": "Doubles the effectiveness of your Shardlings." },
+        "boss_hunter": { "name": "Talisman of the Boss Hunter", "desc": "Doubles the amount of Cosmic Dust received from defeating bosses." },
+        "stored_power": { "name": "Talisman of Stored Power", "desc": "When you return after being offline, gain a massive, temporary production boost." },
+        "alchemist": { "name": "Talisman of the Alchemist", "desc": "Each click has a tiny chance to spontaneously generate a Relic." },
+        "momentum": { "name": "Talisman of Momentum", "desc": "Rapid clicks grant a stacking, temporary click power bonus." },
+        "hoarder": { "name": "Talisman of the Hoarder", "desc": "Gain a massive SPS bonus when your shard count is nearly full." },
+        "collector": { "name": "Talisman of the Collector", "desc": "You no longer need to click Golden Shards; they are collected automatically for a portion of their value." }
+    },
+    "prestige_panel": {
+        "tree_title": "Prestige Tree",
+        "tree_desc": "Spend Relics on permanent upgrades.",
+        "requirement": "Requirement: {{req}} Shards",
+        "gain": "+{{relics}}",
+        "button": "Prestige Now"
+    },
+    "ascension_panel": {
+        "panel_title": "Ascension",
+        "tree_title": "Ascension Tree",
+        "tree_desc": "Spend Essence on permanent, game-altering upgrades.",
+        "requirement": "Requirement: {{req}} Relics",
+        "gain": "+{{essence}} Essence",
+        "button": "Ascend Now",
+        "singularity_grid": "Singularity Grid"
+    },
+    "sg": {
+      "start": { "name": "First Singularity", "desc": "The beginning of true understanding. No effect." },
+      "sps_1": { "name": "Cosmic Flow I", "desc": "Permanently increase all SPS by 50%." },
+      "sps_2": { "name": "Cosmic Flow II", "desc": "Permanently increase all SPS by 100%." },
+      "sps_3": { "name": "Cosmic Flow III", "desc": "Permanently increase all SPS by 200%." },
+      "click_1": { "name": "Focused Intent I", "desc": "Permanently increase all SPC by 50%." },
+      "click_2": { "name": "Focused Intent II", "desc": "Permanently increase all SPC by 100%." },
+      "click_3": { "name": "Focused Intent III", "desc": "Permanently increase all SPC by 200%." },
+      "utility_1": { "name": "Head Start", "desc": "Start every prestige with 5 levels in your first generator." },
+      "utility_2": { "name": "Critical Link", "desc": "Your Shardlings now inherit 50% of your critical damage bonus." }
+    },
+    "challenge": {
+      "panel_title": "Challenges",
+      "active_title": "Challenge Active!",
+      "goal": "Goal: {{shards}} Shards",
+      "reward": "Reward",
+      "start": "Start",
+      "exit": "Exit Challenge",
+      "completed": "Completed",
+      "upgrades_disabled": "Certain upgrades are disabled in this challenge.",
+      "clickers_gambit": { "name": "Clicker's Gambit", "desc": "Generators produce no shards. Rely on your clicks alone!", "reward": "Unlocks the 'Novice Clicker' upgrade." },
+      "patient_observer": { "name": "Patient Observer", "desc": "Clicks produce no shards. Let your generators do the work!", "reward": "Unlocks the 'Idle Acolyte' upgrade." },
+      "rapid_growth": { "name": "Rapid Growth", "desc": "Generator cost scaling is significantly reduced, but the goal is much higher.", "reward": "Permanently reduce all generator costs by 10%." },
+      "crit_overload": { "name": "Critical Overload", "desc": "Your critical chance is 100%, but your base click damage is nearly zero.", "reward": "Permanently increase base critical chance by 1%." },
+      "lone_generator": { "name": "Lone Generator", "desc": "Only Shard Dust produces shards.", "reward": "Permanently double the base production of Shard Dust." }
+    },
+    "lore_panel": {
+      "title": "Story"
+    },
+    "stats_panel": {
+      "title": "Statistics",
+      "current_run": "Current Run",
+      "all_time": "All-Time Stats",
+      "time_played": "Time Played",
+      "shards_earned": "Shards Earned",
+      "relics_on_prestige": "Relics on Prestige",
+      "clicks_made": "Clicks Made",
+      "bosses_defeated": "Bosses Defeated",
+      "golden_shards_clicked": "Golden Shards Clicked",
+      "total_time_played": "Total Time Played",
+      "total_shards_earned": "Total Shards Earned",
+      "total_clicks": "Total Clicks",
+      "total_boss_defeats": "Total Boss Defeats",
+      "total_prestiges": "Total Prestiges",
+      "total_ascensions": "Total Ascensions",
+      "highest_sps": "Highest SPS",
+      "highest_spc": "Highest SPC"
+    },
+    "settings": {
+        "title": "Settings",
+        "save": "Manual Save",
+        "reset": "Hard Reset (Delete)",
+        "pause": "Pause Game",
+        "resume": "Resume Game",
+        "language": "Language",
+        "theme": "Dark Mode",
+        "reset_confirm": "Are you sure you want to permanently delete your save data? This cannot be undone."
+    },
+    "events": {
+        "cosmic_surge": "Cosmic Surge! x{{multiplier}} Production ({{time}}s)"
+    },
+    "boss": {
+        "patrol_name": "Shard Patrol",
+        "fixed": { "guardian_1": { "name": "The First Guardian" }, "guardian_2": { "name": "Prestige Sentinel" } },
+        "summon_patrol_button": "Summon Patrol",
+        "challenge_button": "Challenge {{name}}",
+        "cooldown": "Cooldown: {{time}}",
+        "escaped": "Boss Escaped!",
+        "reward": "+{{reward}} Shards!",
+        "escape_button": "Escape"
+    },
+    "shard_tier": {
+        "proto": "Proto-Shard", "crystal": "Crystal Shard", "astral": "Astral Shard", "singularity": "Singularity Shard"
+    },
+    "shard_tier_desc": {
+        "proto": "The beginning of your journey.", "crystal": "+5% to all Shard gains.", "astral": "5% chance on click to spawn a Golden Shard.", "singularity": "+50% critical click damage."
+    },
+    "generator": {
+        "shard_dust": { "name": "Shard Dust", "desc": "Generates a fine powder of pure energy." }, "lesser_shard": { "name": "Lesser Shard", "desc": "A small, self-replicating crystal fragment." }, "crystal_outcrop": { "name": "Crystal Outcrop", "desc": "Grows larger crystals from the ambient energy." }, "energy_geode": { "name": "Energy Geode", "desc": "A hollow rock lined with pulsating crystals." }, "crystalline_vein": { "name": "Crystalline Vein", "desc": "A massive vein of shard-producing minerals." }, "shard_monolith": { "name": "Shard Monolith", "desc": "A silent, towering structure that hums with power." }, "shard_forge": { "name": "Shard Forge", "desc": "Uses immense pressure and heat to forge new shards." }, "quantum_entangler": { "name": "Quantum Entangler", "desc": "Pulls shards from parallel realities." }, "reality_weaver": { "name": "Reality Weaver", "desc": "Manipulates the fabric of spacetime to create shards." }, "astral_nexus": { "name": "Astral Nexus", "desc": "A confluence of cosmic energies that births shards." }, "singularity_fabricator": { "name": "Singularity Fabricator", "desc": "Condenses a microscopic singularity to generate immense power." }, "evolve_button": "Evolve", "evolution_title": "Evolution"
+    },
+    "evolution": {
+        "gen_1": { "choice_1": { "name": "Symbiosis", "desc": "Boosts the production of Shard Dust by 50%." }, "choice_2": { "name": "Intensify", "desc": "Doubles the base production of this generator." } }, "gen_2": { "choice_1": { "name": "Focusing Lens", "desc": "Adds 1% of this generator's total production to your base click power." }, "choice_2": { "name": "Resonant Field", "desc": "Boosts the production of adjacent generators by 25%." } }
+    },
+    "generator_special_effect": {
+      "bonus_from_shard_dust": "Gains +1% production for each Shard Dust level.", "bonus_per_generator_type": "Gains +5% production for each unique generator type owned."
+    },
+    "upgrade": {
+        "click_1": { "name": "Reinforced Clicks", "total_effect": "+{{value}} Base Click" }, "reinforced_core": { "name": "Reinforced Core", "total_effect": "+{{value}} Base Click" }, "empowered_strikes": { "name": "Empowered Strikes", "total_effect": "+{{value}} Base Click" }, "shattering_force": { "name": "Shattering Force", "total_effect": "+{{value}} Base Click" }, "reality_breaker": { "name": "Reality Breaker", "total_effect": "+{{value}} Base Click" }, "click_add_1k": { "name": "Thousandfold Strike", "total_effect": "+{{value}} Base Click" }, "click_add_10k": { "name": "Myriad Strike", "total_effect": "+{{value}} Base Click" }, "giga_strike": { "name": "Giga Strike", "total_effect": "+{{value}} Base Click" }, "ultimate_strike": { "name": "Ultimate Strike", "total_effect": "+{{value}} Base Click" }, "kinetic_conversion": { "name": "Kinetic Conversion", "total_effect": "+{{value}}% of SPS to Click Power" }, "click_2": { "name": "Click Multiplier", "total_effect": "+{{value}}% Click Power" }, "gen_0_boost": { "name": "Dust Magnetism", "total_effect": "+{{value}}% Generator Power" }, "crit_chance_1": { "name": "Critical Focus", "total_effect": "+{{value}}% Crit Chance" }, "crit_damage_1": { "name": "Critical Power", "total_effect": "+{{value}}% Crit Damage" }, "click_3": { "name": "Click Proficiency", "total_effect": "+{{value}}% Click Power" }, "gen_1_boost": { "name": "Generator Synergy", "total_effect": "+{{value}}% Generator Power" }, "click_4": { "name": "Cosmic Pointer", "total_effect": "+{{value}}% Click Power" }, "click_5": { "name": "Singularity Clicks", "total_effect": "+{{value}}% Click Power" }, "gen_all_boost": { "name": "Cosmic Resonance", "total_effect": "+{{value}}% Generator Power" }, "cosmic_synergy": { "name": "Cosmic Synergy", "total_effect": "+{{value}}% Generator Power (based on owned generator types)" }, "novice_clicker": { "name": "Novice Clicker", "total_effect": "+{{value}}% Click Power" }, "idle_acolyte": { "name": "Idle Acolyte", "total_effect": "+{{value}}% Generator Power" }, "effect": {
+          "add_click": "+{{value}} Base", "multiply_click": "+{{value}}% Click Power", "multiply_sps": "+{{value}}% Generator Power", "crit_chance": "+{{value}}% Crit Chance", "crit_damage": "+{{value}}% Crit Damage"
+        }
+    },
+    "skill": {
+        "omni_click": { "name": "Omni-Click", "desc": "Click anywhere on the screen to generate Shards. Unlocks a +5% bonus for clicking the central Shard directly." }, "frenzied_clicks": { "name": "Frenzied Clicks", "desc": "Unleashes 10 clicks per second for 15 seconds." }, "furious_clicking": { "name": "Furious Clicking", "desc": "Performs auto-clicks while holding down the mouse or spacebar. More levels increase clicks per second.", "total_effect": "+{{value}} Clicks/s while holding" }, "critical_surge": { "name": "Critical Surge", "desc": "Guarantees critical clicks for 10 seconds." }, "shardling_conjure": { "name": "Conjure Shardling", "desc": "Summons Shardlings that automatically click the main Shard for a portion of your click power.", "total_effect": "{{value}} Shardlings" }, "gen_overdrive": { "name": "Generator Overdrive", "desc": "Overcharges all generators, causing them to produce 5x more Shards for 20 seconds." }, "shard_storm": { "name": "Shard Storm", "desc": "Summons a shower of clickable mini-shards for 10 seconds. Each shard clicked grants 1 second of SPS." }, "boss_slayer": { "name": "Boss Slayer", "desc": "Increases all damage dealt to Shard Bosses by 10% per level.", "total_effect": "+{{value}}% Boss Damage" }, "golden_touch": { "name": "Golden Touch", "desc": "Instantly summons a Golden Shard." }, "time_warp": { "name": "Time Warp", "desc": "Instantly gain 30 minutes worth of Shards based on your current SPS." }, "effect": {
+          "auto_click_cps": "+10 Clicks/s", "shardling_count": "+1 Shardling", "boss_damage_mult": "+{{value}}% Boss Damage"
+        }
+    },
+    "prestige_upgrade": {
+      "sps_1": { "name": "Relic of Power", "desc": "Increases all generator production by {{value}}% per level." }, "click_1": { "name": "Relic of Striking", "desc": "Increases all click power by {{value}}% per level." }, "crit_dmg_1": { "name": "Relic of Ruin", "desc": "Increases critical click damage by {{value}}% per level." }, "start_shards": { "name": "Legacy of Wealth", "desc": "Start each new run with {{value}} Shards." }, "relic_gain": { "name": "Relic of Seeking", "desc": "Increases Relics gained from prestige by {{value}}% per level." }, "talisman_slot": { "name": "Talisman Attunement", "desc": "Increases maximum equippable Talismans by {{value}}." }, "base_gen_power": { "name": "Crystalline Foundation", "desc": "Increases the base production of all generators by {{value}}% per level." }, "golden_shard": { "name": "Golden Shard Mastery", "desc": "Increases Golden Shard rewards by {{value}}% per level." }, "boss_cooldown": { "name": "Boss Slayer's Alacrity", "desc": "Reduces the boss summon cooldown by {{value}}% per level." }, "sps_to_click": { "name": "Legacy of Power", "desc": "Adds {{value}}% of your SPS to your click power." }
+    },
+    "ascension_upgrade": {
+      "relic_boost": { "name": "Essence of Multiplicity", "desc": "Your first Ascension upgrade. Triples all future Relic gains." }, "prestige_power": { "name": "Essence of Power", "desc": "Increases the effectiveness of all Prestige upgrades by {{value}}% per level." }, "sps_boost": { "name": "Essence of Creation", "desc": "Increases all generator production by a massive {{value}}% per level." }
+    },
+    "lore": {
+      "1": { "title": "The First Crack", "text": "With the first reset, a tremor runs through the Shard. It is not just a rock; it is a seed. You feel a presence stir within it, ancient and vast. It seems... pleased." }, "2": { "title": "Echoes of Power", "text": "As your shard count reaches cosmic scales, you begin to hear whispers at the edge of perception. They speak of creation, of weavers, and of a reality carved from pure energy. The Shard is a key." }, "3": { "title": "A Guardian's Duty", "text": "The Guardians you defeat are not evil. They are tests, projections created by the Shard to gauge your worth. Each victory proves your resolve, and the Shard resonates with your growing power." }, "4": { "title": "The Weaver's Loom", "text": "The final generator is not a machine. It's a concept, a tool to manipulate the very fabric of existence. You have transcended simple creation. You are now a sculptor of reality itself." }
+    },
+    "bonus": {
+        "x2_prod": "x2 production", "x3_prod": "x3 production", "x4_prod": "x4 production", "x5_prod": "x5 production", "x2_prod_self": "x2 production for this generator", "global_sps_5": "All generators +5% effective", "global_sps_10": "All generators +10% effective", "global_sps_15": "All generators +15% effective", "global_sps_20": "All generators +20% effective", "global_sps_25": "All generators +25% effective", "global_sps_50": "All generators +50% effective", "global_sps_100": "All generators twice as effective", "global_click_10": "All clicks +10% effective", "global_click_15": "All clicks +15% effective", "global_click_20": "Click Power +20%", "global_click_25": "All clicks +25% effective", "global_click_50": "Click Power +50%", "global_click_100": "Evolved Shard Guardian! Global click power x2"
+    },
+    "achievements_panel": {
+        "title": "Achievements", "bonus_prefix": "Bonus", "unlocked": "Unlocked", "toast_title": "Achievement Unlocked!"
+    },
+    "ach": {
+        "shards_1": { "name": "Shard Apprentice", "desc": "Earn a total of 1,000 shards." }, "clicks_1": { "name": "Persistent Clicker", "desc": "Click the shard 500 times." }, "gen_1": { "name": "Lesser Shard Collector", "desc": "Own 50 Lesser Shards." }, "shards_2": { "name": "Millionaire", "desc": "Earn a total of 1 million shards." }, "clicks_2": { "name": "Carpal Tunnel", "desc": "Click the shard 5,000 times." }, "gen_all": { "name": "Diversified Portfolio", "desc": "Own at least one of every generator." }, "prestige_1": { "name": "First Reset", "desc": "Prestige for the first time." }, "boss_1": { "name": "Guardian Slayer", "desc": "Defeat the Shard Guardian 10 times." }, "shards_3": { "name": "Billionaire", "desc": "Earn a total of 1 billion shards." }, "prestige_5": { "name": "Prestige Master", "desc": "Prestige 5 times." }, "clicks_3": { "name": "Godly Clicker", "desc": "Click 100,000 times." }, "ascend_1": { "name": "First Ascension", "desc": "Ascend for the first time." }, "all_talismans": { "name": "Talisman Collector", "desc": "Craft every available Talisman." }, "complete_challenge_1": { "name": "Challenger", "desc": "Complete your first challenge." }, "bonus": {
+            "base_click_1": "+1 to base click power.", "click_5": "+5% to all click power.", "sps_5": "+5% to all generator production.", "sps_10": "+10% to all generator production.", "crit_dmg_10": "+10% to critical click damage.", "base_click_5": "+5 to base click power.", "unlock_cosmic_synergy": "Unlocks the 'Cosmic Synergy' upgrade.", "relics_1": "Instantly gain {{value}} Relic.", "click_10": "+10% to all click power.", "relics_5": "Instantly gain {{value}} Relics.", "relics_100": "Instantly gain {{value}} Relics.", "sps_25": "+25% to all generator production.", "click_25": "+25% to all click power."
+        }
+    }
+}

@@ -1,0 +1,14 @@
+import { Skill } from '../types';
+
+export const INITIAL_SKILLS: Skill[] = [
+    { id: 'skill_omni_click', type: 'PASSIVE', nameKey: 'skill.omni_click.name', descriptionKey: 'skill.omni_click.desc', level: 0, baseCost: 100, maxLevel: 1 },
+    { id: 'skill_frenzied_clicks', type: 'ACTIVE', nameKey: 'skill.frenzied_clicks.name', descriptionKey: 'skill.frenzied_clicks.desc', level: 0, baseCost: 1000, maxLevel: 1, duration: 15, cooldown: 60, isActive: false, cooldownRemaining: 0, durationRemaining: 0 },
+    { id: 'skill_furious_clicking', type: 'PASSIVE', nameKey: 'skill.furious_clicking.name', descriptionKey: 'skill.furious_clicking.desc', totalEffectKey: 'skill.furious_clicking.total_effect', level: 0, baseCost: 5000, costMultiplier: 3.5, maxLevel: 5, effectValue: 10, effectType: 'AUTO_CLICK_CPS' },
+    { id: 'skill_critical_surge', type: 'ACTIVE', nameKey: 'skill.critical_surge.name', descriptionKey: 'skill.critical_surge.desc', level: 0, baseCost: 100000, maxLevel: 1, duration: 10, cooldown: 300, isActive: false, cooldownRemaining: 0, durationRemaining: 0 },
+    { id: 'skill_shardling_conjure', type: 'PASSIVE', nameKey: 'skill.shardling_conjure.name', descriptionKey: 'skill.shardling_conjure.desc', totalEffectKey: 'skill.shardling_conjure.total_effect', level: 0, baseCost: 5e5, costMultiplier: 3, maxLevel: 10, effectValue: 1, effectType: 'SHARDLING_COUNT' },
+    { id: 'skill_gen_overdrive', type: 'ACTIVE', nameKey: 'skill.gen_overdrive.name', descriptionKey: 'skill.gen_overdrive.desc', level: 0, baseCost: 1e6, maxLevel: 1, duration: 20, cooldown: 600, isActive: false, cooldownRemaining: 0, durationRemaining: 0 },
+    { id: 'skill_shard_storm', type: 'ACTIVE', nameKey: 'skill.shard_storm.name', descriptionKey: 'skill.shard_storm.desc', level: 0, baseCost: 1e7, maxLevel: 1, duration: 10, cooldown: 600, isActive: false, cooldownRemaining: 0, durationRemaining: 0 },
+    { id: 'skill_boss_slayer', type: 'PASSIVE', nameKey: 'skill.boss_slayer.name', descriptionKey: 'skill.boss_slayer.desc', totalEffectKey: 'skill.boss_slayer.total_effect', level: 0, baseCost: 1e7, costMultiplier: 5, maxLevel: 10, effectValue: 0.1, effectType: 'BOSS_DAMAGE_MULTIPLIER' },
+    { id: 'skill_golden_touch', type: 'ACTIVE', nameKey: 'skill.golden_touch.name', descriptionKey: 'skill.golden_touch.desc', level: 0, baseCost: 1e8, maxLevel: 1, cooldown: 900, isActive: false, cooldownRemaining: 0, durationRemaining: 0 },
+    { id: 'skill_time_warp', type: 'ACTIVE', nameKey: 'skill.time_warp.name', descriptionKey: 'skill.time_warp.desc', level: 0, baseCost: 1e12, maxLevel: 1, cooldown: 3600, isActive: false, cooldownRemaining: 0, durationRemaining: 0 },
+];
