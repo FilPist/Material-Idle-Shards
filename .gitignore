@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# TWA files
+keystore.jks
+twa-manifest.json

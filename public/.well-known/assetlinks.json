@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.filpist.material_idle_shards",
+    "sha256_cert_fingerprints":
+    ["10:ED:59:F7:EA:F4:23:55:0B:BA:81:89:1C:BE:F4:C1:B3:34:68:41:B7:9F:B6:62:62:E2:37:5D:B1:EB:29:19"]
+  }
+}]

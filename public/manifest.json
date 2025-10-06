@@ -1,0 +1,21 @@
+{
+  "name": "Material Idle Shards",
+  "short_name": "Idle Shards",
+  "description": "An expressive idle clicker game designed with Material 3 principles. Click to generate Shards, buy upgrades to increase your power, and purchase generators for automated, idle income. Progress through tiers and prestige for powerful bonuses.",
+  "start_url": "/Material-Idle-Shards/",
+  "display": "standalone",
+  "background_color": "#f8f7ff",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
